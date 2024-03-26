@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frases Motivadoras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .frase {
+            margin-top: 50px;
+            font-size: 24px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Frases Motivadoras</h1>
+    <div class="frase" id="frase-motivadora">
+        <!-- Aquí se mostrará la frase motivadora -->
+    </div>
+
+    <button onclick="nuevaFrase()">Nueva Frase</button>
+
+    <script>
+        // Array de frases motivadoras
+        var frases = [
+            "El éxito es ir de fracaso en fracaso sin perder entusiasmo.",
+            "La vida es lo que pasa mientras estás ocupado haciendo otros planes.",
+            "Todo es posible. Lo imposible solo tarda un poco más.",
+            "La única forma de hacer un gran trabajo es amar lo que haces.",
+            "El momento es ahora."
+        ];
+
+        function nuevaFrase() {
+            // Obtener un número aleatorio entre 0 y la longitud del array de frases
+            var indice = Math.floor(Math.random() * frases.length);
+            // Obtener la frase correspondiente al índice aleatorio
+            var frase = frases[indice];
+            // Mostrar la frase en el elemento con el id "frase-motivadora"
+            document.getElementById("frase-motivadora").textContent = frase;
+        }
+
+        // Mostrar una frase motivadora al cargar la página
+        nuevaFrase();
+    </script>
+</body>
+</html>
